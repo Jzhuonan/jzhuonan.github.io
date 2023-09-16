@@ -1,0 +1,30 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    /* 竖直排列子元素 */
+    flex-direction: column; 
+    /* 子元素主轴居中 */
+    justify-content: center;
+    /* 子元素交叉轴居中 */
+    align-items: center;
+    background-color:gainsboro;
+    height: 100vh;
+}
+.header {
+    width: 100%;
+    height: 15%;
+    background-color: #0097A7;
+}
+.content {
+    width: 100%;
+    height: 65%;
+    background-color: #B2EBF2;
+
+}
+.footer {
+    width: 100%;
+    height: 20%;
+    background-color: #00BCD4;
+
+}
