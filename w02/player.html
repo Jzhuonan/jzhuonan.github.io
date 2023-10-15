@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLEN Music Player</title>
+  <link rel="stylesheet" href="css/player.css">
+  <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+  <script src="js/vue@2_dist_vue.js"></script>
+  <script src="js/player.js" defer></script>
+</head>
+
+<body>
+  <div class="container" id="app">
+    <header>
+      <nav>
+        <img src="./images/logo.svg" class="logo" alt="logo">
+        <ul>
+          <li><a href="/w02">HOME</a></li>
+          <li><a href="./player.html">PLAY LIST</a></li>
+          <li><a href="./login.html">LOGIN</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="music-list">
+        <div class="song" v-for="(value, index) in songs">
+          <img  class="cover" :src="value.cover" alt="stay">
+          <h3>{{ value.name }}</h3>
+          <p>{{ value.artist }}</p>
+          <img class="play-icon" @click="togglePlay($event, index)" src="./images/play.png" ref="icons" alt="icon">
+          <audio class="player" ref="audio">
+            <source :src="value.src" type="audio/mp3">
+          </audio>
+        </div>
+      </div>
+
+    </main>
+    <footer>
+      <div class="copyright">
+        &copy; 2024 Allen. All rights reserved.
+      </div>
+    </footer>
+    <script>
+
+    </script>
+</body>
+
+</html>
